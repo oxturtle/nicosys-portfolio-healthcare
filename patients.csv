@@ -1,0 +1,501 @@
+patient_id,patient_name,age,gender,city
+1,Kelly Holmes,72,Female,Henderson
+2,Miguel Cruz,37,Male,Henderson
+3,Autumn Smith,31,Male,Henderson
+4,Chloe Mora,30,Female,Henderson
+5,Debra King,51,Male,North Las Vegas
+6,Shari Carroll,76,Male,Henderson
+7,Calvin Leonard,28,Female,North Las Vegas
+8,Lori Stephens,64,Male,North Las Vegas
+9,Raymond Diaz,26,Male,North Las Vegas
+10,Christopher Ramsey,47,Female,Las Vegas
+11,Carl Parrish,47,Male,Henderson
+12,Wendy Ellis,53,Female,North Las Vegas
+13,Shannon Mills,64,Male,Henderson
+14,David Calhoun,63,Male,North Las Vegas
+15,Christopher Rodriguez,52,Male,North Las Vegas
+16,Michelle Murphy,39,Male,Las Vegas
+17,Cynthia Nguyen DDS,77,Female,Henderson
+18,Sarah Martinez,89,Male,North Las Vegas
+19,Mark Novak,59,Male,Las Vegas
+20,Theodore Beck,22,Female,Henderson
+21,Kylie Griffin,52,Male,Las Vegas
+22,Ann Meyer,90,Female,Las Vegas
+23,Christina Butler,81,Female,North Las Vegas
+24,Tonya Meyer,76,Male,Henderson
+25,Donald Brady,35,Male,North Las Vegas
+26,Chad Chapman,89,Female,North Las Vegas
+27,Bradley Ramos,72,Female,Henderson
+28,Sandra Baker,46,Male,North Las Vegas
+29,Michael Brown,81,Male,Las Vegas
+30,Jerry Quinn,32,Male,North Las Vegas
+31,Tiffany Harris,38,Female,North Las Vegas
+32,Elizabeth Clark,26,Female,Henderson
+33,Andrew Hicks,77,Female,North Las Vegas
+34,Andrea Downs,19,Male,North Las Vegas
+35,Jonathan Schmidt,86,Female,North Las Vegas
+36,Megan Carter,61,Male,Henderson
+37,Peggy Parker,73,Male,Henderson
+38,Cheryl Winters,18,Female,North Las Vegas
+39,Caroline Horn,40,Male,North Las Vegas
+40,Virginia Morgan,56,Male,Las Vegas
+41,Mark Reynolds,65,Male,North Las Vegas
+42,Donna Ward,85,Male,North Las Vegas
+43,Mitchell Alexander,59,Female,Las Vegas
+44,Christina Ramsey,32,Female,Henderson
+45,Angel Robertson,48,Male,Las Vegas
+46,Laurie Nelson,90,Male,Las Vegas
+47,Kathleen Douglas,80,Male,North Las Vegas
+48,Joshua Alvarado,34,Male,North Las Vegas
+49,Tracy Parker,78,Male,Henderson
+50,Kelsey Robinson,85,Female,Las Vegas
+51,Kevin Rich,87,Male,North Las Vegas
+52,Meghan Gilbert,57,Female,North Las Vegas
+53,Daniel Butler,65,Female,North Las Vegas
+54,Shane Orr,75,Male,Las Vegas
+55,Justin Johnson,46,Male,Henderson
+56,Jeremy Hernandez,20,Male,North Las Vegas
+57,Dale Green,46,Male,Las Vegas
+58,Daniel Austin,25,Male,Las Vegas
+59,Jill Hudson,22,Female,Las Vegas
+60,Kimberly Fuller,83,Male,Henderson
+61,Tamara Davis,80,Male,North Las Vegas
+62,Mrs. Emily Dean,34,Female,Las Vegas
+63,Katherine Thompson,78,Female,Las Vegas
+64,Leslie White,30,Male,North Las Vegas
+65,Gregory Quinn,73,Female,Henderson
+66,Terri Wilson,70,Female,North Las Vegas
+67,Kathy Terry,24,Male,Las Vegas
+68,Margaret Smith DVM,69,Female,Las Vegas
+69,Shannon Adams,49,Male,Las Vegas
+70,William Smith,86,Female,Las Vegas
+71,Rebecca Rogers,72,Male,Henderson
+72,Anthony Schaefer,77,Male,Las Vegas
+73,Martha Garcia,74,Male,Las Vegas
+74,Deborah Nguyen,87,Male,Las Vegas
+75,Edward Dean,48,Male,Henderson
+76,Stephanie Ortiz,80,Female,Las Vegas
+77,Joel Porter,69,Male,Las Vegas
+78,Daniel Walker MD,66,Male,Henderson
+79,Stephanie Ramirez,51,Female,Henderson
+80,William Palmer,72,Female,Las Vegas
+81,Nancy Anderson,42,Female,Las Vegas
+82,Alicia Torres,25,Male,North Las Vegas
+83,Paul Reed,58,Male,Las Vegas
+84,Kerri Hahn,79,Male,Las Vegas
+85,Jessica Bates,83,Male,Las Vegas
+86,Kimberly Huffman,26,Male,North Las Vegas
+87,Sylvia Wilson,48,Female,Las Vegas
+88,Kimberly Trevino,90,Male,North Las Vegas
+89,Frank Spears,23,Male,Henderson
+90,Rodney Brown,90,Female,Henderson
+91,Nancy Houston,44,Female,Las Vegas
+92,Kevin Jensen,51,Female,Las Vegas
+93,Dustin King,56,Female,Henderson
+94,Felicia Ramsey,27,Male,Henderson
+95,Lisa Ward,90,Male,Las Vegas
+96,Kyle Davis,86,Male,North Las Vegas
+97,Christopher Martinez,51,Male,Henderson
+98,Sandra Wilson,26,Male,Henderson
+99,Michael Williamson,54,Male,Henderson
+100,Elijah Gardner,87,Female,North Las Vegas
+101,Jeff Campbell,85,Male,North Las Vegas
+102,Steven Yoder,88,Female,North Las Vegas
+103,Jorge Hayes,31,Male,Henderson
+104,Heidi Cooper,32,Male,North Las Vegas
+105,Lori Romero,88,Male,Henderson
+106,Ryan Santos,54,Male,North Las Vegas
+107,Matthew Smith,61,Male,North Las Vegas
+108,Natalie Smith,51,Female,Henderson
+109,Christopher Harrington,24,Male,North Las Vegas
+110,Cristina Morse,72,Female,Las Vegas
+111,Joshua Bender,18,Female,Las Vegas
+112,Robert Delgado,51,Male,North Las Vegas
+113,Crystal Hall,74,Female,North Las Vegas
+114,Taylor Ruiz,19,Male,Las Vegas
+115,Susan Parker,37,Male,Henderson
+116,Angela Sanders,88,Male,Henderson
+117,Jason Henson,34,Male,Henderson
+118,Brandon Berg,64,Male,Henderson
+119,Jennifer Campbell,44,Male,North Las Vegas
+120,Andrew Johnson,31,Female,North Las Vegas
+121,Michael Knight,70,Male,Las Vegas
+122,Sandra Barr,38,Male,Henderson
+123,Shelly Mason,21,Male,North Las Vegas
+124,Brooke Russell,60,Female,North Las Vegas
+125,Gabriel Baker,49,Female,Las Vegas
+126,Barbara Brown,31,Female,Las Vegas
+127,Daniel Dennis,78,Male,Las Vegas
+128,Kristen Bond,76,Female,Henderson
+129,Sarah Brown,47,Male,Las Vegas
+130,Bethany Clark,42,Female,Henderson
+131,Benjamin Willis,53,Male,Henderson
+132,Holly Key,62,Female,North Las Vegas
+133,Jacob Thompson,86,Female,Las Vegas
+134,James Davis,32,Female,Las Vegas
+135,Rachael Thomas,51,Male,Las Vegas
+136,Stephanie Phillips,73,Female,North Las Vegas
+137,Robert Hernandez,58,Female,North Las Vegas
+138,Amanda Nelson,83,Male,Henderson
+139,Ricky Gay,42,Female,Las Vegas
+140,Sarah Williams,73,Male,North Las Vegas
+141,Jonathan Hunter,86,Male,Henderson
+142,Caitlyn White,73,Male,North Las Vegas
+143,Kelly Young,60,Female,North Las Vegas
+144,Anthony Malone,33,Female,North Las Vegas
+145,James Johnston PhD,57,Female,Henderson
+146,Veronica Green,69,Female,North Las Vegas
+147,Justin Green,34,Male,Henderson
+148,Kevin Williams,66,Male,North Las Vegas
+149,Dr. Megan Mitchell,90,Female,Henderson
+150,Kevin Lawson,88,Male,Henderson
+151,Katrina Mcdonald,54,Male,Henderson
+152,Ashley Frey,59,Female,Henderson
+153,Douglas Powell,74,Male,North Las Vegas
+154,Andrew Whitehead,78,Male,North Las Vegas
+155,Melissa Francis,28,Female,North Las Vegas
+156,Jason Reid,60,Male,Las Vegas
+157,Lindsey Guerra,57,Male,Las Vegas
+158,Judy Walker,36,Male,Las Vegas
+159,Victoria Rodriguez,49,Female,North Las Vegas
+160,Donna Johnson,27,Female,Henderson
+161,Ryan Johnson,42,Female,Henderson
+162,Miranda Anderson,69,Male,Las Vegas
+163,Abigail Stevens,18,Male,Henderson
+164,William Chavez,46,Male,North Las Vegas
+165,Rhonda Chandler,84,Female,Las Vegas
+166,Paul Sanchez,89,Male,Las Vegas
+167,Sophia Miller,76,Male,Henderson
+168,Ashley Banks,85,Female,Henderson
+169,Terry Williams,82,Female,North Las Vegas
+170,Melissa Joyce,75,Male,North Las Vegas
+171,John Ortega,78,Female,Henderson
+172,Laura Medina,49,Female,North Las Vegas
+173,Kimberly Huff,80,Male,Henderson
+174,Jennifer Kelly,74,Male,North Las Vegas
+175,Deborah Brown,54,Male,Henderson
+176,Alan Jordan,60,Female,North Las Vegas
+177,Sean Turner,28,Male,Las Vegas
+178,Eugene Beck,47,Female,North Las Vegas
+179,Amanda Green,37,Male,Las Vegas
+180,Sean Stein,71,Female,Henderson
+181,Patrick Johnson,87,Female,Henderson
+182,Sarah Smith,25,Male,Henderson
+183,Laura Krueger,67,Male,North Las Vegas
+184,Connie Spencer,66,Female,Las Vegas
+185,John Porter,63,Female,Henderson
+186,Brenda Robinson,71,Male,Henderson
+187,Joy Martinez,46,Female,Henderson
+188,Christopher Martinez,80,Male,Henderson
+189,Heather Mcgrath,61,Female,North Las Vegas
+190,Eric Beasley,39,Female,Las Vegas
+191,Patricia Anderson,86,Male,Henderson
+192,Edward Austin,90,Male,Las Vegas
+193,Steven Beard,72,Male,Henderson
+194,Bobby Keller,41,Male,Henderson
+195,Amanda Patterson,66,Female,Las Vegas
+196,Kenneth Murphy,76,Female,Henderson
+197,Dylan Jones,66,Female,Henderson
+198,Daniel Decker,50,Male,Henderson
+199,Andrea Wise,20,Male,Henderson
+200,Christopher Miller,46,Male,North Las Vegas
+201,Shawn Miller,23,Male,Las Vegas
+202,Dustin Williams,43,Male,North Las Vegas
+203,Amber Parker,37,Male,Las Vegas
+204,Derrick Rice,78,Male,North Las Vegas
+205,John Wallace,45,Female,North Las Vegas
+206,Marie Lewis,50,Female,Las Vegas
+207,Anthony Foster,32,Male,Henderson
+208,Kerri Livingston,31,Male,Henderson
+209,Lacey Hayes,66,Female,North Las Vegas
+210,Jacob Lee,43,Male,North Las Vegas
+211,Miranda Castillo,49,Male,North Las Vegas
+212,Kevin Walton,56,Male,North Las Vegas
+213,Kelly Campos,23,Female,North Las Vegas
+214,Kimberly Jones,72,Female,Las Vegas
+215,Bryan Robinson,82,Female,Las Vegas
+216,Kelly Wilson,71,Female,Las Vegas
+217,Alexandra Walker,73,Female,North Las Vegas
+218,Jessica Clark,76,Male,Henderson
+219,David Mckenzie,40,Female,North Las Vegas
+220,Alicia Wilson,86,Female,Henderson
+221,Rebecca Marquez,73,Female,Henderson
+222,Kristy Huerta,49,Male,Henderson
+223,Steven Valdez,75,Male,Henderson
+224,James Hernandez,90,Female,Henderson
+225,Christopher Nixon,21,Female,Henderson
+226,Mary Martin,41,Female,Las Vegas
+227,Jeremy Woods,63,Female,Henderson
+228,Eric White,53,Female,North Las Vegas
+229,Laura Woods,19,Male,Las Vegas
+230,Michelle Carr,48,Female,Henderson
+231,Elizabeth Vance,89,Male,North Las Vegas
+232,Maureen Gallegos,78,Female,Henderson
+233,Lauren Kelly,20,Male,Henderson
+234,John Lewis,46,Female,North Las Vegas
+235,Regina Reynolds,49,Female,North Las Vegas
+236,Eric Martinez,65,Female,North Las Vegas
+237,Lisa Mendoza,85,Female,Henderson
+238,Jeffrey Washington,88,Female,Henderson
+239,Joshua Fitzgerald,76,Female,Henderson
+240,James Wright,50,Male,Las Vegas
+241,Robert Hogan,42,Female,Las Vegas
+242,Cynthia Holmes,86,Male,Las Vegas
+243,Stephen Stephens,45,Female,Henderson
+244,Jason Walters,85,Female,Las Vegas
+245,Sarah Miller,42,Female,Las Vegas
+246,Charles Reid,64,Male,Henderson
+247,Crystal Burnett,19,Male,Henderson
+248,Frank Johnson,23,Male,North Las Vegas
+249,Benjamin Nunez,55,Male,North Las Vegas
+250,Lisa Bryant,80,Male,Las Vegas
+251,Jeffrey Patterson,54,Female,Henderson
+252,James Griffin II,74,Female,Las Vegas
+253,Eric Stevenson,24,Female,Henderson
+254,Donald Scott,32,Male,Henderson
+255,Autumn Mendoza,80,Male,North Las Vegas
+256,Amy Mueller,24,Male,Las Vegas
+257,Scott Thomas,90,Female,Las Vegas
+258,Alexander Walter,49,Male,North Las Vegas
+259,Harry Mullen,71,Male,North Las Vegas
+260,Robert Burns,66,Female,Henderson
+261,Mrs. Alyssa Rogers,56,Female,Henderson
+262,Ryan Rodriguez,90,Male,North Las Vegas
+263,Kim Bell,30,Male,North Las Vegas
+264,Taylor Gentry,45,Female,North Las Vegas
+265,Leslie Barker,28,Male,Las Vegas
+266,Christy Austin,40,Male,Las Vegas
+267,Matthew Saunders,18,Female,Henderson
+268,Elizabeth Watts,78,Female,Las Vegas
+269,Cindy Gibson,47,Female,North Las Vegas
+270,Ann Hernandez,54,Female,Las Vegas
+271,Jill Ryan,47,Female,North Las Vegas
+272,Patrick Horn,43,Female,Las Vegas
+273,Benjamin Matthews,87,Male,North Las Vegas
+274,Jerry Curtis,37,Female,Las Vegas
+275,Anita Maldonado,27,Male,Las Vegas
+276,Charles Roberts,57,Female,Henderson
+277,Jason Galvan,33,Female,North Las Vegas
+278,Danielle Gonzalez,56,Female,Henderson
+279,Stephanie King,82,Female,Henderson
+280,Thomas Baker,28,Male,Henderson
+281,Brett Anderson,59,Female,Las Vegas
+282,Randy Maxwell,29,Male,North Las Vegas
+283,Joshua Weaver,20,Female,North Las Vegas
+284,Christian Orr,23,Male,Henderson
+285,Kayla Wolfe,84,Female,Henderson
+286,Mr. Kristopher Jacobs,41,Female,North Las Vegas
+287,Sophia Murphy,80,Male,Henderson
+288,Julian Johnson,62,Female,Henderson
+289,Tammy Wright,59,Male,Las Vegas
+290,Haley Lee,60,Female,North Las Vegas
+291,Theodore Aguilar,81,Female,North Las Vegas
+292,John Good Jr.,69,Male,Henderson
+293,Rachel Paul,29,Female,Henderson
+294,Anthony Perry,59,Male,Henderson
+295,Mark Stevens,83,Male,North Las Vegas
+296,Ethan Burch,87,Female,Henderson
+297,Brian Hall,24,Male,North Las Vegas
+298,Sarah Ferguson,64,Female,North Las Vegas
+299,Danielle Lam,74,Male,Las Vegas
+300,Kelsey Weaver,52,Male,Henderson
+301,Ryan Farmer,74,Female,Las Vegas
+302,Benjamin Taylor,21,Male,North Las Vegas
+303,Mr. Daniel Murray,38,Female,North Las Vegas
+304,Victoria Freeman,19,Female,Las Vegas
+305,Sabrina Williams,46,Male,Henderson
+306,Maria Leach,33,Male,Henderson
+307,Leonard Mills,55,Female,Henderson
+308,Jillian Lee,79,Female,Las Vegas
+309,Alan Jones,76,Male,Henderson
+310,Elizabeth Shepherd,42,Male,Las Vegas
+311,Jack Ortiz,53,Female,Henderson
+312,Martha Moore,82,Female,Las Vegas
+313,Jennifer Rice,54,Female,North Las Vegas
+314,Benjamin Nash Jr.,80,Male,Henderson
+315,Austin Malone,86,Female,Henderson
+316,Kelly Anderson,60,Female,Henderson
+317,Elijah Villegas,59,Male,North Las Vegas
+318,Rodney Riddle,48,Female,Las Vegas
+319,Betty Wilson,70,Male,Henderson
+320,Steven Warren,78,Female,Henderson
+321,Dustin Collier,37,Female,Las Vegas
+322,Juan Morris,34,Female,Las Vegas
+323,Micheal Fisher,74,Male,North Las Vegas
+324,Jennifer Williams,76,Male,North Las Vegas
+325,Dylan Smith,36,Female,North Las Vegas
+326,Anthony Key,37,Male,Henderson
+327,Tracy Quinn,51,Female,North Las Vegas
+328,Sarah Burke,68,Male,Henderson
+329,Joseph Boyd,86,Female,Henderson
+330,Linda David,80,Male,North Las Vegas
+331,Luke Cortez,26,Male,North Las Vegas
+332,Jonathan Martin,54,Male,North Las Vegas
+333,Gary Moore,29,Female,Las Vegas
+334,William Kane,30,Female,Las Vegas
+335,Mark Fowler,56,Male,Las Vegas
+336,Stephen Garcia,59,Male,Henderson
+337,Austin Smith,63,Female,Henderson
+338,Austin Rocha,36,Male,North Las Vegas
+339,Bonnie Johnson,70,Male,Las Vegas
+340,Mary Watson,40,Male,North Las Vegas
+341,Sharon Burns,66,Male,Henderson
+342,Elizabeth Allen,36,Male,Henderson
+343,Juan Lang,50,Female,Henderson
+344,Margaret Freeman,19,Female,Henderson
+345,Leah Mcintyre,87,Male,Las Vegas
+346,Leonard Schneider,74,Female,North Las Vegas
+347,Charles Mclaughlin,56,Female,North Las Vegas
+348,Brooke Sloan,50,Female,Henderson
+349,Daisy Henson,43,Female,Henderson
+350,Bryan Wilkerson,31,Male,Henderson
+351,Ian Miller,63,Female,North Las Vegas
+352,Patricia Williams,55,Male,North Las Vegas
+353,Ricky Martinez,68,Female,Las Vegas
+354,Donna Adams,90,Male,North Las Vegas
+355,James Smith,81,Female,Las Vegas
+356,Michael Benson,63,Male,North Las Vegas
+357,Brooke Hunter,42,Female,North Las Vegas
+358,Peter Shelton,35,Male,North Las Vegas
+359,John Flowers,23,Female,Henderson
+360,Kristy Mason,22,Female,North Las Vegas
+361,Patrick Jones,34,Male,Henderson
+362,David Guerrero,59,Female,Las Vegas
+363,Pamela Christian,43,Male,North Las Vegas
+364,Diane Smith,64,Female,Las Vegas
+365,Tara Robinson,50,Female,Henderson
+366,Aaron Padilla,61,Male,Henderson
+367,Laura Walker,27,Male,Las Vegas
+368,Mitchell Wilkerson,68,Female,Las Vegas
+369,Anthony Woods DVM,68,Male,Henderson
+370,Heather Myers,86,Male,Henderson
+371,Megan Booker,65,Female,North Las Vegas
+372,Joe Hernandez,66,Female,Las Vegas
+373,Michael Mcdonald,47,Female,Las Vegas
+374,Katherine Walker,89,Female,North Las Vegas
+375,Veronica Mcintosh,46,Male,North Las Vegas
+376,Lisa Mitchell,77,Female,North Las Vegas
+377,Linda Peterson,70,Male,Las Vegas
+378,Stacey Smith,23,Male,Henderson
+379,Tina White,81,Male,Las Vegas
+380,Elizabeth Bishop,48,Male,Henderson
+381,Jessica Everett,76,Female,North Las Vegas
+382,Eric Avery,87,Female,North Las Vegas
+383,Henry Parker,37,Female,North Las Vegas
+384,Madison Rodriguez,30,Female,North Las Vegas
+385,Melissa Jackson,70,Female,Las Vegas
+386,Sabrina Ayers,65,Male,Henderson
+387,David Gutierrez,74,Male,Henderson
+388,Nicolas Williams,30,Female,North Las Vegas
+389,Christopher Herman,63,Male,Henderson
+390,Megan Garcia,53,Male,Las Vegas
+391,Christopher Dixon,76,Male,North Las Vegas
+392,Melissa Perry,45,Male,Las Vegas
+393,Tiffany Jenkins,60,Male,Las Vegas
+394,Alicia Garcia,90,Male,Las Vegas
+395,Bradley Holt,88,Male,North Las Vegas
+396,Sandra Smith,45,Male,Henderson
+397,Jamie Le,36,Male,Henderson
+398,Scott Bell,36,Male,North Las Vegas
+399,Peggy Holland,50,Male,Las Vegas
+400,Christina Frank,21,Male,Las Vegas
+401,Rebecca Stevens,63,Male,North Las Vegas
+402,Omar Williams,59,Male,Las Vegas
+403,Richard Macdonald,51,Male,Las Vegas
+404,Eddie Schmidt,71,Male,North Las Vegas
+405,Robin Wright,26,Female,Henderson
+406,John Patel DDS,64,Male,Henderson
+407,Dana Griffin,82,Male,North Las Vegas
+408,Catherine Gordon,23,Female,Henderson
+409,Melanie Olson,21,Male,Henderson
+410,Stephen Franklin,69,Female,North Las Vegas
+411,Christopher Stanley,31,Female,North Las Vegas
+412,Jesse Johnson,74,Male,Las Vegas
+413,Alexis Nichols,59,Male,Las Vegas
+414,Alexander Powers,34,Female,North Las Vegas
+415,Joshua Thompson,88,Female,Henderson
+416,Connie Jones,85,Female,Henderson
+417,Walter Williams,82,Female,Las Vegas
+418,Andrew Barrett,32,Male,Henderson
+419,Tara Gonzales,75,Male,Henderson
+420,Kimberly Price DVM,61,Female,Henderson
+421,Paul Prince,71,Male,Henderson
+422,April Dixon,72,Female,North Las Vegas
+423,Justin Johnson,50,Female,Las Vegas
+424,Deanna Hatfield,78,Male,Las Vegas
+425,Nancy Garcia,28,Male,Henderson
+426,Elizabeth Johnston,30,Female,Las Vegas
+427,William Jones,89,Male,North Las Vegas
+428,Jonathan Reyes,89,Female,North Las Vegas
+429,Juan Riggs,33,Female,Henderson
+430,Jason Hawkins,72,Male,Henderson
+431,Tiffany Hunter,57,Female,Las Vegas
+432,Susan Moran,82,Male,Las Vegas
+433,Laura Russo,79,Male,Las Vegas
+434,Michael Osborne,62,Female,Las Vegas
+435,Amber Silva,53,Male,Henderson
+436,Abigail Bradford,89,Male,North Las Vegas
+437,Brandon Pena,52,Male,Las Vegas
+438,Jeffrey Lewis,52,Female,Henderson
+439,Carlos Collins,62,Male,Las Vegas
+440,Samuel Mooney,36,Female,Las Vegas
+441,Samantha Lucas,36,Male,Las Vegas
+442,Autumn Hill,85,Male,Henderson
+443,Erika Hicks,71,Female,Henderson
+444,Alexander Mccoy,38,Female,Henderson
+445,Heather Warren,59,Male,Las Vegas
+446,David Fernandez,37,Male,North Las Vegas
+447,Matthew Cantrell,24,Male,Henderson
+448,Alexis Stevens,74,Female,Henderson
+449,Ashley Brown,74,Female,Henderson
+450,Randall French,45,Male,Henderson
+451,Jesus Duncan MD,73,Male,Henderson
+452,Sandra Jones,80,Female,Las Vegas
+453,Stephen Fernandez,46,Female,North Las Vegas
+454,Bobby Soto,25,Male,Las Vegas
+455,Stephen Austin,56,Male,Las Vegas
+456,Stacy Terry,50,Female,Henderson
+457,Patrick Johnson,33,Male,Henderson
+458,Maria Davis DDS,73,Male,Las Vegas
+459,Daniel Gardner DVM,66,Male,North Las Vegas
+460,Anita Conner,89,Female,Las Vegas
+461,David Johnston,68,Male,Henderson
+462,Justin Henry,20,Female,Las Vegas
+463,Benjamin Harris,58,Female,North Las Vegas
+464,Roger Brown,69,Female,Henderson
+465,Mrs. Jessica Fields,32,Female,Las Vegas
+466,Michelle Coleman,59,Male,North Las Vegas
+467,Derrick Norton,76,Female,Las Vegas
+468,Whitney Gonzalez,73,Male,Las Vegas
+469,Travis Castillo,73,Female,North Las Vegas
+470,Elizabeth Browning,28,Female,Henderson
+471,Tammy Monroe,61,Male,Henderson
+472,Thomas Harris,39,Male,North Las Vegas
+473,Erin Higgins,32,Male,Henderson
+474,Daniel Turner,62,Male,Las Vegas
+475,Claire Nichols,31,Male,Henderson
+476,Mark Rodriguez,43,Male,North Las Vegas
+477,Roger Scott,37,Male,Las Vegas
+478,Maureen Henry,81,Female,North Las Vegas
+479,Kevin Mcpherson,75,Female,North Las Vegas
+480,Hannah Gibbs,58,Male,Henderson
+481,Elizabeth Baldwin,26,Female,Henderson
+482,Carol Jones,56,Female,North Las Vegas
+483,Paul Smith,25,Female,North Las Vegas
+484,Kristin Knight,27,Female,Henderson
+485,Michael Smith,75,Male,Las Vegas
+486,Charles Berg,65,Female,Las Vegas
+487,Lisa Henry,29,Female,Henderson
+488,Rachel Holland,88,Male,Henderson
+489,Christopher Smith,42,Female,North Las Vegas
+490,Jennifer Herrera,78,Male,Las Vegas
+491,Megan Simmons,75,Male,Henderson
+492,Megan Hall,28,Male,Las Vegas
+493,Matthew Reynolds,49,Female,Henderson
+494,Michelle Jones,85,Male,Henderson
+495,Brittany Roman,65,Female,Henderson
+496,Alexander Thomas,70,Female,North Las Vegas
+497,Brenda Horton,24,Female,Las Vegas
+498,Erik Jimenez,60,Male,North Las Vegas
+499,Paul Sanchez,67,Female,Henderson
+500,Paul Stein,37,Female,Las Vegas
