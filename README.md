@@ -26,7 +26,7 @@ reports/        # Power BI files, summaries, and insights
 Each folder is designed to mirror a real analytics workflow:  
 **collect → clean → analyze → visualize → document.**
 
-## 🎯 Purpose
+## Purpose
 This portfolio demonstrates my ability to:
 
 - Work with healthcare datasets  
@@ -36,7 +36,7 @@ This portfolio demonstrates my ability to:
 - Organize projects using VS Code and GitHub  
 - Communicate insights clearly and professionally  
 
-## 🚀 Future Enhancements
+## Future Enhancements
 - Add more healthcare datasets  
 - Expand SQL transformations  
 - Build additional Power BI dashboards also Tableau
