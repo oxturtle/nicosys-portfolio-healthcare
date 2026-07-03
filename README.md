@@ -13,12 +13,15 @@ I use a combination of industry‑standard tools to manage, analyze, and visuali
 - **VS Code** – coding, documentation, and project organization  
 
 ## Repository Structure
+~~~
 data/
 ├── raw/        # Original source data
 ├── cleaned/    # Processed and analysis-ready datasets
 sql/            # PostgreSQL queries and transformations
 scripts/        # Utility scripts (future expansion)
 reports/        # Power BI files, summaries, and insights
+~~~
+
 
 Each folder is designed to mirror a real analytics workflow:  
 **collect → clean → analyze → visualize → document.**
