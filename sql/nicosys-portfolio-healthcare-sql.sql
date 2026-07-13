@@ -1,53 +1,48 @@
---The following code is how I built the tables for my healthcare portfolio project. 
-
-Create Table appointments (
-	  appointment_id bigint
-	, patient_id bigint
-	, provider_id bigint
-	, department char(20)
-	, appointment_date date
-	, appointment_day char(10)
-	, appointment_type varchar(20)
-	, appointment_status char(10)
-	, appointment_duration_mintues int
-	, patient_satisfaction_score decimal(2,1)
-)
-;
-
-Create Table patients (
-	  patient_id bigint
-	, patient_name varchar(25)
-	, age int
-	, gender varchar(10)
-	, city varchar(25)
-)
-;
-
-
-Create Table providers (
-	  provider_id bigint
-	, provider_name varchar(25)
-	, department char(17)
-	, years_experience int
-)
-;
-
-Create Table er_visits (
-	  visit_id bigint
-	, patient_id bigint
-	, arrival_date date
-	, arrival_day char(9)
-	, arrival_hour int
-	, severity_level varchar(20)
-	, wait_time_minutes int
-	, length_of_stay_hours decimal(4,2)
-	, admitted char(3)
-)
-;
-
-
-Select 
-	*
+--avg wait times in er: 74.31 minutes
+Select
+	avg(wait_time_minutes) average_wait_time_minutes
 From
-	
+	er_visits 
 ;
+
+
+--median wait time in er: 67 minutes
+Select
+	percentile_disc(.5)
+	Within Group (Order By wait_time_minutes) as median_wait_time
+From
+	er_visits 
+;
+
+-- Days of the week experiencing longest wait times. 
+Select
+	  arrival_day
+	, max(wait_time_minutes)
+From
+	er_visits
+Group By
+	  arrival_day
+	, wait_time_minutes
+Order By
+	wait_time_minutes desc
+;
+
+
+Select
+	  visit_id
+	, patient_id
+	, arrival_date
+	, arrival_day
+	, arrival_hour
+	, severity_level
+	, wait_time_minutes
+	, length_of_stay_hours
+	, admitted
+From
+	er_visits
+Order By
+	wait_time_minutes
+;
+
+
+
