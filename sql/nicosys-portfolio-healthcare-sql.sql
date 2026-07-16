@@ -1,4 +1,4 @@
---avg wait times in er: 74.31 minutes
+--What is the average wait time in ER: 74.31 minutes
 Select
 	avg(wait_time_minutes) average_wait_time_minutes
 From
@@ -6,7 +6,7 @@ From
 ;
 
 
---median wait time in er: 67 minutes
+--What is the median wait time in ER: 67 minutes
 Select
 	percentile_disc(.5)
 	Within Group (Order By wait_time_minutes) as median_wait_time
@@ -14,7 +14,7 @@ From
 	er_visits 
 ;
 
--- Days of the week experiencing longest wait times. 
+-- What days of the week experience the longest wait times? Mondays, Tuesdays, Thursdays, and Saturdays 
 Select
 	  arrival_day
 	, max(wait_time_minutes)
@@ -28,21 +28,55 @@ Order By
 ;
 
 
---Hours experiencing the highest patient volume
+/*What Hour(s) experienced the highest patient volume?
+The top 3 hours of the day that experienced the most patients in a day are:
+02:00 at 144 pts, 21:00 at 141 pts, and 0:00 with 140 pts. Totaling 425 pts. 
+
+Amount of Severity Level pts during peak times: 
+Low = 137 | 32% of pts during peak hours are Low Severity  
+Medium = 165 | 39% of pts during peak hours are Medium Severity
+High = 100 | 24% of pts during peak hours are High Severity
+Critical = 23 | 5% of pts during peak hours are Critical 
+*/
 Select
-	  count(arrival_date) as number_of_patients
-	, arrival_date
-	, arrival_hour
+	sum(number_of_patients_er_visits)
 From
-	er_visits
-Group By
-	  arrival_hour
-	, arrival_date
-Order By
-	number_of_patients desc
+	(
+		Select
+			  count(*) as number_of_patients_er_visits
+			, arrival_hour
+		From
+			er_visits
+		Where
+			severity_level = 'Medium'
+			and arrival_hour IN (2, 21, 0)
+		Group By
+			  arrival_hour
+		Order By
+			number_of_patients_er_visits desc
+	)
 ;
 
---Correlation between Severity Level and Wait Time | 1052 Low Severity | 439 Low Severity >=120 | 613 Low Severity <120 | Med Severity 1158, >=120: 13, <120:1145 | 452 | .97/.03
+--What hours of day see the most patients in the ER? 0200, 2100, and 000
+Select
+			  count(*) as number_of_patients_er_visits
+			, arrival_hour
+		From
+			er_visits
+		Group By
+			  arrival_hour
+		Order By
+			number_of_patients_er_visits desc
+
+
+/*Does Severity Levels impact Wait Times? 
+Yes. As severity levles rise, so does the maximum wait times.
+1052 Low Severity 
+Med Severity 1158
+High Severity 642
+Critical 148
+*/
+
 Select
 	  visit_id
 	, patient_id
@@ -57,12 +91,14 @@ From
 	er_visits
 Where
 	severity_level = 'Critical'
-	--and wait_time_minutes <120
+	and wait_time_minutes >120
 Order By
 	wait_time_minutes
 ;
 
---Wait Times of Admitted Patients: 76 min vs Dishcarged Patients: 73 min
+/*Are Admitted Patients waiting longer than dicharged patients?
+Yes, but it's not substantial. Admitted pts wait an avg 76 min vs Dishcarged Patients at 73 min
+*/
 Select
 	  avg(wait_time_minutes) avg_wait_time_min
 	, admitted
@@ -85,36 +121,8 @@ Group By
 	admitted
 ;
 
---Patient Volume
-Select
-	  patient_id
-	, count(patient_id) number_of_er_visits
-From
-	er_visits
-Group By
-	patient_id
-Order By
-	number_of_er_visits desc
-;
 
-Select
-	  patient_id
-	, count(patient_id) number_of_visits
-	, arrival_date
-	, severity_level
-	, admitted
-From
-	er_visits
-Group By
-	  patient_id
-	, severity_level
-	, admitted
-	, arrival_date
-Order By
-	patient_id
-;
-
---Patient's volume of er visits
+--Is there a pattern to Patients' ER visits?
 SELECT
     patient_id,
     arrival_date,
@@ -128,30 +136,10 @@ FROM er_visits
 ORDER BY patient_id, arrival_date;
 ;
 
-Select
-	  visits_in_18_months
-	, count(visits_in_18_months) number_of_pts
-From
-	(
-		SELECT
-		      patient_id
-		    , COUNT(*) AS visits_in_18_months
-			--, severity_level
-		FROM 
-			er_visits
-		GROUP BY 
-			  patient_id
-			--, severity_level
-		ORDER BY 
-			visits_in_18_months DESC
-	)
-Group By
-	visits_in_18_months
-Order By
-	number_of_pts desc
-;
 
 
+
+--How many times in 18 months does a patient visit the ER? Are these normal or frequent flyers?
 SELECT
       patient_id
     , COUNT(*) AS visits_in_18_months
@@ -190,41 +178,4 @@ Select
 	, admitted
 From
 	er_visits
-WHERE 
-	arrival_day IN ('Monday', 'Tuesday', 'Thursday', 'Saturday')
-	and wait_time_minutes >60
-	and arrival_hour IN (1, 10)
-Order By
-	wait_time_minutes desc
 ;
-
-Select
-	avg(length_of_stay_hours)
-From
-	(
-		Select
-			  visit_id
-			, patient_id
-			, arrival_date
-			, arrival_day
-			, arrival_hour
-			, severity_level
-			, wait_time_minutes
-			, length_of_stay_hours
-			, admitted
-		From
-			er_visits
-		WHERE 
-			arrival_day IN ('Monday', 'Tuesday', 'Thursday', 'Saturday')
-			and wait_time_minutes >60
-			and arrival_hour IN (1, 10)
-		Order By
-			wait_time_minutes desc
-	)
-;
-
-
-
-
-
-
