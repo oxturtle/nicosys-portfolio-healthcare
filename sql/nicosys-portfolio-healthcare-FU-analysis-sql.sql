@@ -2,6 +2,16 @@
 Business Question: 
 Which patient age groups experience the longest Emergency Department wait times?
 
+To define age groups, the catergories of age are referenced from healthcare industry-strandards:
+0–17 (pediatrics) The dataset does not contain any patients under 18.
+
+18–44 (young adults)
+
+45–64 (middle-aged adults)
+
+65+ (older adults / Medicare)
+
+
 Stakeholder: 
 Leadershiop of Valley Regional Medical Center
 
@@ -11,65 +21,51 @@ To see if specific age demographics experience longer wait times than others.
 SQL Query: (see below)
 
 Findings:
-The age groups that expereince the longest ER wait times or 180 minutes are, 53, 61, 74, and 76. 
-However, the wait time that has the most occurance is 179 mintues, being experienced by 8 age groups. This is double that of age groups experiencing 180 minute wait times. 
+Age group 45-64 experience the longest wait times averaging 77 min and a median wait time 72 min.
 
 Business Insight:
-The patient age group experiencing the longest Emergency Department wait times of 180 minutes are, 53, 61, 74, and 76. People who wait 179 minutes occur 50% more than those waiting 180 minutes.
-Everyone waiting 180 minutes was over 50 years old. While those waiting 179 minutes have 71% patients over the age of 40, and 29% under 31 years old. 
+The patient age group experiencing the longest Emergency Department wait times compared to others are ages 45-64. 
+The average wait time is 77.34 minutes, the median wait time is 72 min, and the max wait time is 180 minutes. Their total ER visist is 867.
+Age group 18-44 wait an average of 73.99 minutes, have a median wait time of 66 minutes, and experienced a max wait time of 179 min. Their total ER visist is 934.
+Lastly Older Adults (ages 65+) wait on average 72.38 minutes, have a median wait time of 65 minutes, and experienced a max watit time of 180 mintues. Their total ER visist is 1199. 
 
+Recomendation:
+Further investigate whether the longer wait times among patients aged 45-64 are associated with visit severity, arrival time, diagnostic needs, or other operational factors. 
+Since the difference in average wait times is modest, no operational change should be made based on age alone. 
 */
 --Which patient age groups experience the longest Emergency Department wait times?
-Select
-	  pts.age
-	, max(wait_time_minutes) max_wait_time_minutes
-From
-	er_visits er
-		inner join patients pts
-			on er.patient_id=pts.patient_id
-Group By
-	pts.age
-Order By
-	max_wait_time_minutes desc
-;
 
---Of the wait times, which occurs the most? 179 mintues occurs 8 times compared to 180 minutes occuring 4 times. 
+--The following CTE, groups the ages into 4 categories. The dataset does not contain any patients under 18. 
+with patient_age_groups as (
+	Select
+		  er.wait_time_minutes
+		, pts.age
+		, case
+			when pts.age <18 then 'Under_18'
+			when pts.age between 18 and 44 then '18-44'
+			when pts.age between 45 and 64 then '45-64' --middle age
+			when pts.age >64 then 'Older_Adults'
+			else 'Group_Not_Represented'
+		  end as age_group
+	From
+		er_visits er
+			inner join patients pts
+				on er.patient_id=pts.patient_id
+)
+--Then from the CTE, I select the fields I want displayed and group findings by age groups.
 Select
-	  max_wait_time_minutes
-	, count(max_wait_time_minutes)
+	  age_group
+	, count(*) as total_er_visits
+	, round(avg(wait_time_minutes),2) as average_wait_time_minutes 
+	--round((),2) allows me to take a value and only go up to 2 decimal places
+	, percentile_cont(.5)
+		within group(order by wait_time_minutes) as median_wait_time
+	, max(wait_time_minutes) as max_wait_time_minutes
 From
-	(
-		Select
-			  pts.age
-			, max(wait_time_minutes) max_wait_time_minutes
-		From
-			er_visits er
-				inner join patients pts
-					on er.patient_id=pts.patient_id
-		Group By
-			pts.age
-		Order By
-			max_wait_time_minutes desc
-	)
+	patient_age_groups
 Group By
-	max_wait_time_minutes
+	age_group
 Order By
-	max_wait_time_minutes desc
+	average_wait_time_minutes desc
 ;
-
---What are the age groups experiencing wait times of 179 minutes? 89, 70, 52, 48, 42, 30, 24 (71% are over 40)
---What are the age groups experiencing wait times of 180 minutes? 76, 74, 61, 53 (All over 53)
-Select
-	    pts.age
-	--, max(wait_time_minutes) max_wait_time_minutes
-From
-	er_visits er
-		inner join patients pts
-			on er.patient_id=pts.patient_id
-Where
-	wait_time_minutes = 179 --replace the wait time with 180 to see age groups experiencing 180 min wait times.
-Group By
-	pts.age
-Order By
-	age desc
-;
+	
