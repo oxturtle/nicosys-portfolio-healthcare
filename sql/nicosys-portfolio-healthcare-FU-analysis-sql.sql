@@ -1,3 +1,63 @@
+/*
+Business Question: 
+Does provider Experience appear to influence patient satisfaction?
+
+Stakeholder: 
+Leadership of Valley Regional Medical Center
+
+Purpose:
+To see if providers' years of experience has an affect on overall patient satisfaction scores. 
+
+SQL Query: (see below)
+
+Findings:
+Across all providers, the average satisfaction scores are within 4.09 - 4.25. 
+Every provider has been part of a 5.0 max patient satisfaction score. 
+The minimum patient satisfaction score ranges from 2.0 - 2.8. 
+
+Business Insight:
+Low scores and high scores are associated across high and low years of experience. 
+The average, maximum, and minimum satisfaction scores are close within range of each provider's year of experience. 
+
+Recomendation:
+Years of expereince alone does not seem to influence patient satisfaction. 
+Furhter investigations into appointment type, department, repeat visits to the same provider or being randomly assigned, and other operational factors. 
+*/
+
+Select
+	  prov.provider_id
+	, prov.years_experience
+	, max(patient_satisfaction_score)
+	, min(patient_satisfaction_score)
+	, round(avg(patient_satisfaction_score),2) as avg_satisf_score
+
+From
+	providers prov
+		inner join appointments app
+			on prov.provider_id=app.provider_id
+
+Group By	
+	  prov.provider_id 
+	, prov.years_experience
+
+Order By
+	avg_satisf_score desc
+;
+
+
+Select
+	*
+From
+	appointments
+;
+
+Select
+	*
+From
+	providers
+;
+
+
 --tables used:
 Select 
 	*
@@ -10,6 +70,59 @@ Select
 From
 	patients pts
 ;
+
+Select 
+	*
+From
+	appointments
+;
+
+
+
+	
+
+
+
+/*
+Business Question: 
+Which cities generate the highest Emergency Department utilization?
+Out of the 3 cities within the datasets, Henderson generates the highest Emergency Department utilization at 1103 visits. 
+
+Stakeholder: 
+Leadership of Valley Regional Medical Center
+
+Purpose:
+To see patient cities that visit the Emergency Department the most. 
+
+SQL Query: (see below)
+
+Findings:
+Henderson generated the highest Emergency Department utilization with 1103 ER visits. 
+North Las Vegas generated 970 ER visits.
+Las Vegas generated 927 visits. 
+
+Business Insight:
+Representing the largest share among the three cities in the dataset, 
+Henerson residents accounted for approximately 37% of all Emergency Department visits.
+North Las Vegas accounted for ~32%, while Las Vegas accounted for ~31%. 
+
+Recomendation:
+Look further into why Henderson residents account for the highest share of Emergency Department visits.
+Additional analysis of patient demographics, level of severity, insurance type, and primary diagnoses may help determine wheter higher utilization reflects operational factors.
+*/
+
+Select
+	  pts.city
+	, count(*) as number_of_er_visits 
+From
+	er_visits er
+		inner join patients pts
+			on er.patient_id=pts.patient_id
+Group By
+	pts.city
+;
+
+
 
 
 
@@ -82,46 +195,4 @@ Group By
 	age_group
 Order By
 	average_wait_time_minutes desc
-;
-	
-
-
-
-/*
-Business Question: 
-Which cities generate the highest Emergency Department utilization?
-Out of the 3 cities within the datasets, Henderson generates the highest Emergency Department utilization at 1103 visits. 
-
-Stakeholder: 
-Leadership of Valley Regional Medical Center
-
-Purpose:
-To see patient cities that visit the Emergency Department the most. 
-
-SQL Query: (see below)
-
-Findings:
-Henderson generated the highest Emergency Department utilization with 1103 ER visits. 
-North Las Vegas generated 970 ER visits.
-Las Vegas generated 927 visits. 
-
-Business Insight:
-Representing the largest share among the three cities in the dataset, 
-Henerson residents accounted for approximately 37% of all Emergency Department visits.
-North Las Vegas accounted for ~32%, while Las Vegas accounted for ~31%. 
-
-Recomendation:
-Look further into why Henderson residents account for the highest share of Emergency Department visits.
-Additional analysis of patient demographics, level of severity, insurance type, and primary diagnoses may help determine wheter higher utilization reflects operational factors.
-*/
-
-Select
-	  pts.city
-	, count(*) as number_of_er_visits 
-From
-	er_visits er
-		inner join patients pts
-			on er.patient_id=pts.patient_id
-Group By
-	pts.city
 ;
