@@ -1,3 +1,18 @@
+--tables used:
+Select 
+	*
+From
+	er_visits er
+;
+
+Select
+	*
+From
+	patients pts
+;
+
+
+
 /*
 Business Question: 
 Which patient age groups experience the longest Emergency Department wait times?
@@ -69,3 +84,44 @@ Order By
 	average_wait_time_minutes desc
 ;
 	
+
+
+
+/*
+Business Question: 
+Which cities generate the highest Emergency Department utilization?
+Out of the 3 cities within the datasets, Henderson generates the highest Emergency Department utilization at 1103 visits. 
+
+Stakeholder: 
+Leadership of Valley Regional Medical Center
+
+Purpose:
+To see patient cities that visit the Emergency Department the most. 
+
+SQL Query: (see below)
+
+Findings:
+Henderson generated the highest Emergency Department utilization with 1103 ER visits. 
+North Las Vegas generated 970 ER visits.
+Las Vegas generated 927 visits. 
+
+Business Insight:
+Representing the largest share among the three cities in the dataset, 
+Henerson residents accounted for approximately 37% of all Emergency Department visits.
+North Las Vegas accounted for ~32%, while Las Vegas accounted for ~31%. 
+
+Recomendation:
+Look further into why Henderson residents account for the highest share of Emergency Department visits.
+Additional analysis of patient demographics, level of severity, insurance type, and primary diagnoses may help determine wheter higher utilization reflects operational factors.
+*/
+
+Select
+	  pts.city
+	, count(*) as number_of_er_visits 
+From
+	er_visits er
+		inner join patients pts
+			on er.patient_id=pts.patient_id
+Group By
+	pts.city
+;
