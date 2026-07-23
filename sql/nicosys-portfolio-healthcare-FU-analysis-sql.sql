@@ -11,22 +11,20 @@ To see if providers' years of experience has an affect on overall patient satisf
 SQL Query: (see below)
 
 Findings:
-Across all providers, the average satisfaction scores are within 4.09 - 4.25. 
-Every provider has been part of a 5.0 max patient satisfaction score. 
-The minimum patient satisfaction score ranges from 2.0 - 2.8. 
+Across the 15 categories of years of experience groups represented in the dataset, average patient satisfaction scores ranged from 4.14 to 4.22.
+All experience levels were associated with at least one maximum satisfaction score of 5.0, while minimum satisfaction scores ranged from 2.0 to 2.8.
 
 Business Insight:
-Low scores and high scores are associated across high and low years of experience. 
-The average, maximum, and minimum satisfaction scores are close within range of each provider's year of experience. 
+Patient satisfaction remained consistently high across all years of provider experience.
+Since average satisfaction scores varied by only .08 points, there is little evidence that provider experience alone has a meaningful influence on patient satisfaction.  
 
 Recomendation:
-Years of expereince alone does not seem to influence patient satisfaction. 
-Furhter investigations into appointment type, department, repeat visits to the same provider or being randomly assigned, and other operational factors. 
+Provider expereince does not appear to be a primary driver of patient satisfaction. 
+Future analyses should investigate other factors such as appointment type, department, continuity of care, provider workload, patient characteristics, or other operational factors to better understand what influences satisfaction scores.  
 */
 
 Select
-	  prov.provider_id
-	, prov.years_experience
+	  prov.years_experience
 	, max(patient_satisfaction_score)
 	, min(patient_satisfaction_score)
 	, round(avg(patient_satisfaction_score),2) as avg_satisf_score
@@ -36,12 +34,12 @@ From
 		inner join appointments app
 			on prov.provider_id=app.provider_id
 
-Group By	
-	  prov.provider_id 
-	, prov.years_experience
+Group By	 
+	prov.years_experience
 
 Order By
 	avg_satisf_score desc
+	--years_experience
 ;
 
 
