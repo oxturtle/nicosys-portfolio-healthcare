@@ -1,9 +1,7 @@
 # Healthcare Data Analytics Portfolio
 
 ## Overview
-This repository showcases my work in healthcare data analytics, focusing on practical, real‑world data skills used to explore, clean, analyze, and visualize healthcare datasets. The goal is to demonstrate strong analytical thinking, technical proficiency, and clear communication of insights.
-
-## Business Question
+This repository showcases my work in healthcare data analytics, focusing on practical, real‑world data skills used to explore, clean, analyze, and visualize healthcare datasets. The goal is to demonstrate strong analytical thinking, technical proficiency, and clear communication of insights utilzing synthetic datasets designed to represent a composition of various Las Vegas hospitals.   
 
 
 ## Tools & Technologies
@@ -43,9 +41,22 @@ This portfolio demonstrates my ability to:
 - Organize projects using VS Code and GitHub  
 - Communicate insights clearly and professionally  
 
+## Business Problem and Question
+With extensive wait times in the Emergency Department, what could be causing them? Leadership at the Valley Regional Medical Center has requested to investigate and present findings. Within my SQL scripts, I have answered the following questions: 
+- What is the average and median wait time in the ER?
+- What Hour(s) experienced the highest patient volume?
+- Does severity levels impact wait times?
+- Are Admitted Patients waiting longer than dicharged patients?
+
+Additionally, I answered following questions to simulate follow ups from the stakeholders:
+- Which appointment types have the highest patient satisfaction scores?
+- Which patient demographic groups account for the greatest number of appointment no-shows?
+- Does provider experience appear to influence patient satisfaction?
+- Which cities generate the highest emergency department utilization?
+- Which patient age groups experience the longest emergency department with times?
+
 ## Future Enhancements
-- Add more healthcare datasets  
-- Expand SQL transformations  
+- Expand analysis w/ Adv SQL transformations such as window functions  
 - Build additional Power BI dashboards also Tableau
 - Add Python scripts for automation  
 
