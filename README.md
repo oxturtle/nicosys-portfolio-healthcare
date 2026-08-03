@@ -3,6 +3,9 @@
 ## Overview
 This repository showcases my work in healthcare data analytics, focusing on practical, real‑world data skills used to explore, clean, analyze, and visualize healthcare datasets. The goal is to demonstrate strong analytical thinking, technical proficiency, and clear communication of insights.
 
+## Business Question
+
+
 ## Tools & Technologies
 I use a combination of industry‑standard tools to manage, analyze, and visualize data:
 
@@ -15,11 +18,15 @@ I use a combination of industry‑standard tools to manage, analyze, and visuali
 ## Repository Structure
 ~~~
 data/
-├── raw/        # Original source data
-├── cleaned/    # Processed and analysis-ready datasets
-sql/            # PostgreSQL queries and transformations
-scripts/        # Utility scripts (future expansion)
-reports/        # Power BI files, summaries, and insights
+├── raw/            # Original source data
+├── cleaned/        # Processed and analysis-ready datasets
+documentation/      # Documentation of projects and ERD design
+excel-validation/   # Validating SQL findings
+images/             # Images used in this project 
+powerbi/            # Powerbi files 
+presentation/       # Files for presneting findings
+reports/            # Summaries, and insights
+sql/                # PostgreSQL queries and transformations
 ~~~
 
 
@@ -41,4 +48,4 @@ This portfolio demonstrates my ability to:
 - Expand SQL transformations  
 - Build additional Power BI dashboards also Tableau
 - Add Python scripts for automation  
-- Document case studies and project walkthroughs
+
