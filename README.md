@@ -55,6 +55,9 @@ Additionally, I answered following questions to simulate follow ups from the sta
 - Which cities generate the highest emergency department utilization?
 - Which patient age groups experience the longest emergency department with times?
 
+## Project Presentation 
+- [Canva](https://canva.link/pejgq6y4stbf1aj)
+
 ## Future Enhancements
 - Expand analysis w/ Adv SQL transformations such as window functions  
 - Build additional Power BI dashboards also Tableau
