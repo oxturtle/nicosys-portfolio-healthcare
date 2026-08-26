@@ -164,7 +164,7 @@ Select
 
 
 /*Does Severity Levels impact Wait Times? 
-Yes. As severity levles rise, so does the maximum wait times.
+Yes. As severity levles rise, average ER wait times decrease.
 1052 Low Severity pts seen with avg wait time of 109 min
 Med Severity 1158 pts seen with avg wait time of 73 min
 High Severity 642 pts seen with avg wait time of 35 min
